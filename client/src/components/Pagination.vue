@@ -89,6 +89,11 @@ export default {
     if (this.range > this.pages) {
       this.range = this.pages;
     }
+  },
+  mounted() {
+    this.$root.$on("pagechange", data => {
+      this.page = data;
+    });
   }
 };
 </script>

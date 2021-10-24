@@ -549,6 +549,7 @@ export default {
       });
     },
     updatePage(page) {
+      this.$root.$emit("pagechange", page); // update all pagination components
       let process = "Loading images from dataset";
       this.addProcess(process);
 
